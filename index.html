@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Босс — Личная страница</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f9f9f9;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 0.2em;
+        }
+
+        p.description {
+            font-size: 1.2em;
+            max-width: 600px;
+            text-align: center;
+            margin-bottom: 2em;
+            color: #666;
+        }
+
+        .quote {
+            font-style: italic;
+            font-size: 1.4em;
+            max-width: 700px;
+            text-align: center;
+            margin-bottom: 1em;
+            color: #444;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            margin-top: 3em;
+            font-size: 0.9em;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Босс</h1>
+    <p class="description">Студент, исследующий глубины психологии и философии. Скептик, практик, любитель нестандартных идей.</p>
+
+    <div class="quote" id="quote">"Cogito, ergo sum." — Рене Декарт</div>
+
+    <button onclick="generateQuote()">Новая цитата</button>
+
+    <footer>© 2025 Босс</footer>
+
+    <script>
+        const quotes = [
+            '"Человек есть то, что он делает из себя." — Жан-Поль Сартр',
+            '"Путь в тысячу ли начинается с одного шага." — Лао-цзы',
+            '"Единственное, что я знаю, это то, что я ничего не знаю." — Сократ',
+            '"Не существует фактов, есть лишь интерпретации." — Фридрих Ницше',
+            '"Жизнь без исследования не стоит того, чтобы её прожить." — Сократ',
+            '"Время есть огонь, в котором мы горим." — Делмор Шварц',
+            '"Человек рожден быть свободным, но повсюду он в оковах." — Жан-Жак Руссо',
+            '"Мужество — это знать, что ты проиграл, но все равно продолжать бороться." — Харпер Ли',
+            '"Будь тем изменением, которое хочешь увидеть в мире." — Махатма Ганди',
+            '"Счастье зависит от нас самих." — Аристотель'
+        ];
+
+        function generateQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById('quote').textContent = quotes[randomIndex];
+        }
+    </script>
+
+</body>
+</html>
